@@ -33,6 +33,9 @@ def analyze_emotion():
         text_to_analyze
     )
 
+    if response["dominant_emotion"] is None:
+        return "Invalid text! Please try again!"
+
     result = (
         f"For the given statement, "
         f"the system response is "
